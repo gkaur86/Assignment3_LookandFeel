@@ -119,10 +119,15 @@ var stackedBar = new Chart(ctx, {
             display: true,
             text: 'SPAM Calls in Florida'
           },
-          tooltips: {
-            mode: 'index',
-            intersect: false
-          },
+    tooltips: {
+      mode: 'label',
+      callbacks: {
+        footer: (tooltipItems, data) => {
+          let total = tooltipItems.reduce((a, e) => a + parseInt(e.yLabel), 0);
+          return 'Total: ' + total;
+        }
+      }
+    },
           responsive: false,
           scales: {
             xAxes: [{

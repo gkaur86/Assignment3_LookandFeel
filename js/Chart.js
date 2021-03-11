@@ -128,7 +128,7 @@ var stackedBar = new Chart(ctx, {
         }
       }
     },
-          responsive: false,
+          responsive: true,
           scales: {
             xAxes: [{
               stacked: true,

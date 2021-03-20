@@ -48,23 +48,55 @@ body {font-family: "Lato", sans-serif}
         <p>Gurmeet Kaur</p>
         <img src="img/gurmeet.jpeg" class="w3-round w3-margin-bottom" alt="Gurmeet Kaur" style="width:60%" height="200px">
         <p> Gurmeet was responsible for the idea for the assignment, creating infrastructure code, finding the data for the assignment and creating the dummy CRUD call</p>
+
         <p>gurmeetkaur@usf.edu</p> 
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">GIT LOG</button>
+
       </div>
       <div class="w3-third">
         <p>Andres Herrera</p>
         <img src="img/and.jpeg" class="w3-round w3-margin-bottom" alt="Andres Herrera" style="width:60%" height="200px">
         <p>Andres was resposible for the CSS and making the site responsive so that it can be seen on screen of any size</p> 
         <p>andresh@usf.edu</p> 
+        <button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-black">GIT LOG</button>
       </div>
       <div class="w3-third">
         <p>Zoe Day</p>
         <img src="img/zoe.jpeg" class="w3-round w3-margin-bottom" alt="Zoe Day" style="width:60%" height="200px">
          <p>Zoe was responsible for making the visuzalization responsive and creating the database model</p> 
           <p>zmday@usf.edu</p> 
+          <button onclick="document.getElementById('id03').style.display='block'" class="w3-button w3-black">GIT LOG</button>
       </div>
     </div>
 
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+<img id="myImg1" src="img/GurmeetLog.png" style="width:100%;max-width:400px">
+      </div>
+    </div>
+  </div>
 
+
+<div id="id02" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id02').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+<img id="myImg2" src="img/AndresLog.png"  style="width:100%;max-width:400px">
+      </div>
+    </div>
+  </div>
+
+
+<div id="id03" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id03').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+<img id="myImg3" src="img/ZoeLog.png"  style="width:100%;max-width:400px">
+      </div>
+    </div>
+  </div>
   <!--
   <div class="header"> 
     <h1>ABOUT US</h1> 
@@ -126,6 +158,7 @@ body {font-family: "Lato", sans-serif}
 </div>
 <script>
 
+
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() {
   var x = document.getElementById("navDemo");
@@ -135,6 +168,24 @@ function myFunction() {
     x.className = x.className.replace(" w3-show", "");
   }
 }
+var modal = document.getElementById('id01');
+var modall = document.getElementById('id02');
+var modalr = document.getElementById('id03');
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+
+  }
+    if (event.target == modall) {
+    modall.style.display = "none";
+  }
+
+      if (event.target == modalr) {
+    modalr.style.display = "none";
+  }
+}
+
 
 
 </script>
